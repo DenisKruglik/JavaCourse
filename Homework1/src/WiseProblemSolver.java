@@ -106,6 +106,42 @@ public class WiseProblemSolver {
 //        }catch(Exception e){}
 //        System.out.println(WiseProblemSolver.calculator(a,b,o));
 
+//        3.5
+//
+//        int x1=0,y1=0,r1=0,x2=0,y2=0,r2=0;
+//        try{
+//            String str = br.readLine();
+//            x1 = Integer.valueOf(str);
+//            str = br.readLine();
+//            y1 = Integer.valueOf(str);
+//            str = br.readLine();
+//            r1 = Integer.valueOf(str);
+//            str = br.readLine();
+//            x2 = Integer.valueOf(str);
+//            str = br.readLine();
+//            y2 = Integer.valueOf(str);
+//            str = br.readLine();
+//            r2 = Integer.valueOf(str);
+//        }catch(Exception e){}
+//        WiseProblemSolver.getIntersection(x1,y1,r1,x2,y2,r2);
+
+//        4.1
+//
+//        int k = 0;
+//        try{
+//            String str = br.readLine();
+//            k = Integer.valueOf(str);
+//        }catch(Exception e){}
+//        System.out.println(WiseProblemSolver.getKFibonacciNumber(k));
+
+//        4.2
+//
+//        int n = 0;
+//        try{
+//            String str = br.readLine();
+//            n = Integer.valueOf(str);
+//        }catch(Exception e){}
+//        System.out.println(WiseProblemSolver.factorial(n));
     }
 
     public static int linearEquation(int a, int b){
@@ -178,5 +214,30 @@ public class WiseProblemSolver {
         }
     }
 
+    public static void getIntersection(int x1, int y1, int r1, int x2, int y2, int r2){
+        double d = Math.sqrt(Math.pow(x1-x2,2)+Math.pow(y1-y2,2));
+        if (d > r1+r2){
+            System.out.println("Don't intersect");
+        }else if(d == r1+r2){
+            System.out.println("Intersect in a single point");
+        }else if(d < r1+r2){
+            double f1 = 2 * Math.acos((r1*r1 - r2*r2 + d*d) / (2 * r1 * d));
+            double f2 = 2 * Math.acos((r2*r2 - r1*r1 + d*d) / (2 * r2 * d));
+            double s1 = (r1*r1 * (f1 - Math.sin(f1))) / 2;
+            double s2 = (r2*r2 * (f2 - Math.sin(f2))) / 2;
 
+            System.out.println(s1+s2);
+        }
+    }
+
+    public static int getKFibonacciNumber(int k){
+        int current = 1, prev = 0, ind = 1, temp = 0;
+        while(ind < k){
+            temp = current;
+            current += prev;
+            prev = temp;
+            ind++;
+        }
+        return current;
+    }
 }
