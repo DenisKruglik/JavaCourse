@@ -142,6 +142,33 @@ public class WiseProblemSolver {
 //            n = Integer.valueOf(str);
 //        }catch(Exception e){}
 //        System.out.println(WiseProblemSolver.factorial(n));
+
+//        4.3
+//
+//        int n = 0;
+//        try{
+//            String str = br.readLine();
+//            n = Integer.valueOf(str);
+//        }catch(Exception e){}
+//        System.out.println(WiseProblemSolver.harmonicSeriesSum(n));
+
+//        4.4
+//
+//        int n = 0;
+//        try{
+//            String str = br.readLine();
+//            n = Integer.valueOf(str);
+//        }catch(Exception e){}
+//        System.out.println(WiseProblemSolver.binary(n));
+
+//        4.5
+//
+//        int n = 0;
+//        try{
+//            String str = br.readLine();
+//            n = Integer.valueOf(str);
+//        }catch(Exception e){}
+//        System.out.println(WiseProblemSolver.isSimple(n));
     }
 
     public static int linearEquation(int a, int b){
@@ -239,5 +266,41 @@ public class WiseProblemSolver {
             ind++;
         }
         return current;
+    }
+
+    public static double harmonicSeriesSum(int n){
+        double sum = 0;
+        for(int i = 1; i <= n; i++){
+            sum += 1/(double)i;
+        }
+        return sum;
+    }
+
+    public static String binary(int n){
+        String res = "";
+        int i = 0;
+        while (n > 0){
+            res += n % 2;
+            n /= 2;
+            i++;
+        }
+        res = WiseProblemSolver.recursiveReverse(res);
+        return res;
+    }
+
+    public static String recursiveReverse(String s) {
+        if ((null == s) || (s.length() <= 1)) {
+            return s;
+        }
+        return WiseProblemSolver.recursiveReverse(s.substring(1)) + s.charAt(0);
+    }
+
+    public static boolean isSimple(int n){
+        for (int i = 2; i <= Math.sqrt(n); i++){
+            if (n % i == 0){
+                return false;
+            }
+        }
+        return true;
     }
 }
