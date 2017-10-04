@@ -169,6 +169,24 @@ public class WiseProblemSolver {
 //            n = Integer.valueOf(str);
 //        }catch(Exception e){}
 //        System.out.println(WiseProblemSolver.isSimple(n));
+
+//        4.6
+//
+//        int n = 0;
+//        try{
+//            String str = br.readLine();
+//            n = Integer.valueOf(str);
+//        }catch(Exception e){}
+//        System.out.println(WiseProblemSolver.naturalDivisorSum(n));
+
+//        4.11
+//
+        int n = 0;
+        try{
+            String str = br.readLine();
+            n = Integer.valueOf(str);
+        }catch(Exception e){}
+        System.out.println(WiseProblemSolver.formatNumber(n));
     }
 
     public static int linearEquation(int a, int b){
@@ -302,5 +320,27 @@ public class WiseProblemSolver {
             }
         }
         return true;
+    }
+
+    public static int naturalDivisorSum(int n){
+        int sum = n + 1;
+        for (int i = 2; i <= n/2; i++){
+            if (n % i == 0){
+                sum += i;
+            }
+        }
+        return sum;
+    }
+
+    public static String formatNumber(int n){
+        String s = Integer.toString(n);
+        int length = s.length();
+        for (int i = length - 1, j = 1; i > 0; i--, j++){
+            if (j % 3 == 0){
+                s = s.substring(0, i) + " " + s.substring(i);
+                j = 0;
+            }
+        }
+        return s;
     }
 }
