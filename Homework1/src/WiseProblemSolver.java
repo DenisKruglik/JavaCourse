@@ -181,12 +181,89 @@ public class WiseProblemSolver {
 
 //        4.11
 //
-        int n = 0;
+//        int n = 0;
+//        try{
+//            String str = br.readLine();
+//            n = Integer.valueOf(str);
+//        }catch(Exception e){}
+//        System.out.println(WiseProblemSolver.formatNumber(n));
+
+//        5.1
+//
+//        int n[] = {2,6,8,5,1};
+//        System.out.println(WiseProblemSolver.sumArray(n));
+
+//        5.2
+//
+//        int n = 0;
+//        try{
+//            System.out.println("Enter array length:");
+//            String str = br.readLine();
+//            n = Integer.valueOf(str);
+//        }catch(Exception e){}
+//        int arr[] = new int[n];
+//        for(int i = 0; i < n; i++){
+//            try{
+//                System.out.println("Enter "+(i+1)+" element:");
+//                String str = br.readLine();
+//                arr[i] = Integer.valueOf(str);
+//            }catch(Exception e){}
+//        }
+//        System.out.println(WiseProblemSolver.minMaxProduct(arr));
+
+//        5.3
+//
+//        int a = 0, b = 0;
+//        try{
+//            String str = br.readLine();
+//            a = Integer.valueOf(str);
+//            str = br.readLine();
+//            b = Integer.valueOf(str);
+//        }catch(Exception e){}
+//        long arr[] = WiseProblemSolver.randomArray(a, b);
+//        for(int i = 0; i < arr.length; i++){
+//            System.out.println(arr[i]);
+//        }
+
+//        6.1
+//
+//        int n = 0;
+//        try{
+//            String str = br.readLine();
+//            n = Integer.valueOf(str);
+//        }catch(Exception e){}
+//        System.out.println(WiseProblemSolver.factorialLoop(n));
+
+//        6.2 == 4.5
+
+//        6.3 == 4.2
+
+//        6.6
+//
+//        int n = 0;
+//        try{
+//            String str = br.readLine();
+//            n = Integer.valueOf(str);
+//        }catch(Exception e){}
+//        System.out.println(WiseProblemSolver.randString(n));
+
+//        7.2
+//
+//        String str = "";
+//        try{
+//            str = br.readLine();
+//        }catch(Exception e){}
+//        System.out.println(WiseProblemSolver.bracketsValidator(str));
+
+//        7.3
+//
+        String str = "";
         try{
-            String str = br.readLine();
-            n = Integer.valueOf(str);
+            str = br.readLine();
         }catch(Exception e){}
-        System.out.println(WiseProblemSolver.formatNumber(n));
+        String w[] = WiseProblemSolver.shortestLongest(str);
+        System.out.println(w[0]);
+        System.out.println(w[1]);
     }
 
     public static int linearEquation(int a, int b){
@@ -342,5 +419,77 @@ public class WiseProblemSolver {
             }
         }
         return s;
+    }
+
+    public static int sumArray(int[] arr){
+        int sum = 0;
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] % 2 == 0 && arr[i] % 3 != 0){
+                sum += arr[i];
+            }
+        }
+        return sum;
+    }
+
+    public static int minMaxProduct(int[] arr){
+        int min = arr[0], max = arr[0];
+        for(int i = 1; i < arr.length; i++){
+            min = arr[i] < min ? arr[i] : min;
+            max = arr[i] > max ? arr[i] : max;
+        }
+        return min*max;
+    }
+
+    public static long[] randomArray(int a, int b){
+        int min = a < b ? a : b, max = a > b ? a : b, length = 10;
+        long res[] = new long[length];
+        for(int i = 0; i < length; i++){
+            res[i] = Math.round(Math.random() * (max - min) + min);
+        }
+        return res;
+    }
+
+    public static int factorialLoop(int n){
+        int res = 1;
+        while(n > 1){
+            res *= n;
+            n--;
+        }
+        return res;
+    }
+
+    public static String randString(int n){
+        String alphabet = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890";
+        String res = "";
+        for (int i = 0; i < n; i++){
+            res += alphabet.charAt((int)Math.round(Math.random()*alphabet.length()));
+        }
+        return res;
+    }
+
+    public static boolean bracketsValidator(String s){
+        int counter = 0;
+        for(int i = 0; i < s.length(); i++){
+            if (s.charAt(i) == '(') counter++;
+            if (s.charAt(i) == ')') counter--;
+            if (counter < 0) return false;
+        }
+        if (counter == 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public static String[] shortestLongest(String s){
+        s = s.trim();
+        String words[] = s.split("\\s+");
+        String shortest = words[0], longest = words[0];
+        for(int i = 0; i < words.length; i++){
+            shortest = shortest.length() < words[i].length() ? shortest : words[i];
+            longest = longest.length() > words[i].length() ? longest : words[i];
+        }
+        String res[] = {shortest, longest};
+        return res;
     }
 }
