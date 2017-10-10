@@ -2,9 +2,9 @@ public class Cart {
     int amount;
     Product products[];
 
-    Cart(Product p[], int a){
+    Cart(int a){
         amount = a;
-        products = p;
+        products = new Product[a];
     }
 
     void addTo(Product t, int k) throws NonexistentPlaceException{
@@ -17,17 +17,21 @@ public class Cart {
     double totalPrice(){
         double sum = 0;
         for (int i = 0; i < amount; i++){
-            sum += products[i].getCostPrice();
+            if (products[i] != null){
+                sum += products[i].getCostPrice();
+            }
         }
         return sum;
     }
 
     void print(){
         for (int i = 0; i < amount; i++){
-            System.out.println(products[i].getTitle());
-            System.out.println(products[i].getCostPrice());
-            System.out.println(products[i].getWeight());
-            System.out.println(products[i].getCategory());
+            if (products[i] != null){
+                System.out.println(products[i].getTitle());
+                System.out.println(products[i].getCostPrice());
+                System.out.println(products[i].getWeight());
+                System.out.println(products[i].getCategory());
+            }
         }
         System.out.println(amount);
     }
