@@ -24,7 +24,7 @@ public abstract class Human extends Character implements Attacking{
             System.out.println(this.getName() + " missed!");
         }else{
             target.setHealth(startHealth - totalDmg);
-            System.out.println(target.getName() + " took " + totalDmg + " damage");
+            System.out.println(target.getName() + " took " + totalDmg + " damage from " + this.getName());
             if (target.getHealth() <= 0){
                 System.out.println(target.getName() + " died");
                 target = null;
