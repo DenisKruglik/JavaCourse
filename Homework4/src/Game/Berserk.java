@@ -6,6 +6,7 @@ public class Berserk extends Creature {
     }
 
     Berserk(){
+       // super("Berzerk ",...);
         this.setName("Berserk");
         this.setHealth(60);
         this.setDamage(40);
