@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Homework7</string>
+    <string name="title">Регистрация в приложении</string>
+    <string name="fio">ФИО</string>
+    <string name="l_name">Фамилия</string>
+    <string name="f_name">Имя</string>
+    <string name="m_name">Отчество</string>
+    <string name="personal">Персональные данные</string>
+    <string name="age">Возраст</string>
+    <string name="city">Город</string>
+    <string name="tel">Номер телефона</string>
+    <string name="email">E-mail</string>
+    <string name="makeout">Придумайте пароль</string>
+    <string name="password">Пароль</string>
+    <string name="repeat">Повторите пароль</string>
+    <string name="mail">Рассылка</string>
+    <string name="tip">Укажите, как часто Вы хотите получать новостную рассылку от нашего сервиса. В рассылку включены рекламные материалы, а также новые проекты по Вашим предпочтениям.</string>
+    <string name="onceaday">1 раз в сутки</string>
+    <string name="fourtimesaweek">4 раза в неделю</string>
+    <string name="onceaweek">1 раз в неделю</string>
+    <string name="twiceamonth">2 раза в месяц</string>
+    <string name="onceamonth">1 раз в месяц</string>
+    <string name="register_confirm">Подтверждение регистрации</string>
+    <string name="im16">На момент регистрации мне исполнилось 16 лет</string>
+    <string name="terms">Я прочитал и согласен с условиями использования сервиса</string>
+    <string name="registration">Регистрация</string>
+    <string name="back">Вернуться</string>
+</resources>
