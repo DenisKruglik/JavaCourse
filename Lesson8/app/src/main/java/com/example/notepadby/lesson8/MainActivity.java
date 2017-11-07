@@ -1,5 +1,10 @@
 package com.example.notepadby.lesson8;
 
+import android.animation.Animator;
+import android.content.DialogInterface;
+import android.content.res.AssetManager;
+import android.graphics.Typeface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -21,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView tax = null;
     private TextView total = null;
     private Button pay = null;
+    private MainActivity self = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +39,18 @@ public class MainActivity extends AppCompatActivity {
         total = (TextView)findViewById(R.id.total);
         pay = (Button)findViewById(R.id.pay);
         input.setText("0");
+
+        AssetManager am = getAssets();
+        Typeface font = Typeface.createFromAsset(am, "font/marckscript_regular.ttf");
+        pay.setTypeface(font);
+
+//        for (int i = 0; i <= 10; i++){
+//            String cats = getResources().getQuantityString(R.plurals.cats, i);
+//            Toast.makeText(this, i + " " + cats, Toast.LENGTH_LONG).show();
+//        }
+
         seek.setMax(100);
-        Toast.makeText(this, "Hello!", Toast.LENGTH_LONG).show();
+
         seek.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -69,6 +85,45 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
 
+            }
+        });
+
+        final String []arr = getResources().getStringArray(R.array.my_arr);
+        pay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                AlertDialog.Builder dialog = new AlertDialog.Builder(self);
+//                dialog.setTitle("Choose your destiny!");
+//                dialog.setItems(arr, new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        Toast.makeText(self, arr[which], Toast.LENGTH_LONG).show();
+//                    }
+//                });
+//                dialog.show();
+
+                v.animate().alpha(0).setDuration(3000);
+                v.animate().setListener(new Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        Toast.makeText(self, "Animation is over", Toast.LENGTH_LONG).show();
+                    }
+
+                    @Override
+                    public void onAnimationCancel(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animator animation) {
+
+                    }
+                });
             }
         });
     }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lesson8</string>
+    <string name="pay">Оплатить</string>
+    <string name="tax">Налог:</string>
+    <string name="total">Итого:</string>
+    <string name="item1">Предмет 1</string>
+    <string name="item2">Предмет 2</string>
+    <string name="item3">Предмет 3</string>
+    <string name="item4">Предмет 4</string>
+    <string name="item5">Предмет 5</string>
+</resources>
