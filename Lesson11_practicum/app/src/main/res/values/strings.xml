@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Lesson11_practicum</string>
+
+    <string name="choose_outgo_city">Выберите город отправления</string>
+    <string name="choose_arrival_city">Выберите город прибытия</string>
+    <string name="choose_outgo_date">Выберите дату отправления</string>
+    <string name="search">Поиск</string>
+    <string name="choose_classes">Выберите желаемые классы</string>
+
+    <string name="econom">Эконом-класс</string>
+    <string name="business">Бизнес-класс</string>
+    <string name="luxe">Люкс</string>
+    <string name="fill_required">Заполните обязательные поля!</string>
+    <string name="chosen_date">Выбранная дата:</string>
+    <string name="chosen_classes">Выбранные классы</string>
+    <string name="rub">руб.</string>
+    <string name="price">Стоимость:</string>
+    <string name="not_found">Билеты не найдены</string>
+    <string name="outgo">Отправление:</string>
+    <string name="arrival">Прибытие:</string>
+    <string name="sort">Сортировка:</string>
+    <string name="by_price">по стоимости</string>
+    <string name="by_duration">по времени в пути</string>
+</resources>
