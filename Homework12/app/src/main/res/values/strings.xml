@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name">Homework12</string>
+
+    <string name="choose_outgo_city">Выберите город отправления</string>
+    <string name="choose_arrival_city">Выберите город прибытия</string>
+    <string name="choose_outgo_date">Выберите дату отправления</string>
+    <string name="search">Поиск</string>
+    <string name="choose_classes">Выберите желаемые классы</string>
+
+    <string name="econom">Эконом-класс</string>
+    <string name="business">Бизнес-класс</string>
+    <string name="luxe">Люкс</string>
+    <string name="fill_required">Заполните обязательные поля!</string>
+    <string name="chosen_date">Выбранная дата:</string>
+    <string name="chosen_classes">Выбранные классы</string>
+    <string name="rub">руб.</string>
+    <string name="price">Стоимость:</string>
+    <string name="not_found">Билеты не найдены</string>
+    <string name="outgo">Отправление:</string>
+    <string name="arrival">Прибытие:</string>
+    <string name="sort">Сортировка:</string>
+    <string name="by_price">по стоимости</string>
+    <string name="by_duration">по времени в пути</string>
+
+    <string name="your_order">Ваш заказ</string>
+    <string name="positions">Позиций:</string>
+    <string name="sum">Сумма:</string>
+    <string name="purchase">Оформить</string>
+    <string name="cancel">Отмена</string>
+    <string name="pizza">Пицца</string>
+    <string name="contents">Состав:</string>
+    <string name="buy_for">Купить за</string>
+    <string name="date_choice">Выберите дату доставки</string>
+    <string name="time_choice">Выберите время доставки</string>
+    <string name="for_payment">К оплате:</string>
+    <string name="ok">OK</string>
+
+    <string name="cheese">сыр плавленный</string>
+    <string name="mushrooms">шампиньоны</string>
+    <string name="ketchup">кепчук</string>
+    <string name="sausage">колбаса</string>
+    <string name="olives">оливки</string>
+    <string name="pepper">перец сладкий</string>
+    <string name="chili">перец чили</string>
+    <string name="ham">ветчина</string>
+
+    <string name="pepperoni">Пепперони</string>
+    <string name="ham_mushrooms">С ветчиной и грибами</string>
+    <string name="super_hot">Супер острая</string>
+
+    <string name="cm">см</string>
+
+    <string name="empty_order">Вы ничего не заказали</string>
+
+    <string name="apply_order">Подтвердите заказ</string>
+
+    <string name="size">Размер:</string>
+
+    <string name="success">Ваш заказ успешно оформлен</string>
+
+    <string name="reset">C/CE</string>
+    <string name="root">√</string>
+    <string name="mem_show">Mr</string>
+    <string name="mem_subtract">M-</string>
+    <string name="mem_add">M+</string>
+    <string name="div">/</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="multiply">*</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="minus">-</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="plus">+</string>
+    <string name="zero">0</string>
+    <string name="dot">.</string>
+    <string name="equals">=</string>
+
+    <string name="title">Регистрация в приложении</string>
+    <string name="fio">ФИО</string>
+    <string name="l_name">Фамилия</string>
+    <string name="f_name">Имя</string>
+    <string name="m_name">Отчество</string>
+    <string name="personal">Персональные данные</string>
+    <string name="age">Возраст</string>
+    <string name="city">Город</string>
+    <string name="tel">Номер телефона</string>
+    <string name="email">E-mail</string>
+    <string name="makeout">Придумайте пароль</string>
+    <string name="password">Пароль</string>
+    <string name="repeat">Повторите пароль</string>
+    <string name="mail">Рассылка</string>
+    <string name="tip">Укажите, как часто Вы хотите получать новостную рассылку от нашего сервиса. В рассылку включены рекламные материалы, а также новые проекты по Вашим предпочтениям.</string>
+    <string name="onceaday">1 раз в сутки</string>
+    <string name="fourtimesaweek">4 раза в неделю</string>
+    <string name="onceaweek">1 раз в неделю</string>
+    <string name="twiceamonth">2 раза в месяц</string>
+    <string name="onceamonth">1 раз в месяц</string>
+    <string name="register_confirm">Подтверждение регистрации</string>
+    <string name="im16">На момент регистрации мне исполнилось 16 лет</string>
+    <string name="terms">Я прочитал и согласен с условиями использования сервиса</string>
+    <string name="registration">Регистрация</string>
+    <string name="back">Вернуться</string>
+</resources>

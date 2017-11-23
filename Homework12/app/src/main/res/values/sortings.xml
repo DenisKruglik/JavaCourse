@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sortings">
+        <item>@string/by_price</item>
+        <item>@string/by_duration</item>
+    </string-array>
+</resources>
